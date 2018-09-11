@@ -22,7 +22,7 @@ for i in range(0, len(s)):
         else:
             a.append(chr(ord(s[i]) + k))
     elif ord(s[i]) >= 48 and ord(s[i]) <= 57:
-        c = (ord(s[i]) - 48 + k) % 10
+        c = (ord(s[i]) - 48 + n) % 10
         c += 48
         a.append(chr(c))
     else:
