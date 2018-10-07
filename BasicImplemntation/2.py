@@ -30,7 +30,6 @@ for i in range(0, t):
     ar = [];  aa = []
     for i in range(0, 10000):
         ar.append(treefactorial(i))
-    #print(ar)
     for i in range(0, len(ar)):
         count = 0
         n = ar[i]
