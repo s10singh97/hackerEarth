@@ -1,0 +1,3 @@
+# Magical Word
+
+t = int()
