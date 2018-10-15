@@ -1,12 +1,10 @@
 # Chefs and Semi-Primes
 
-t = int(input())
-if t < 1 or t > 200:
-    sys.exit()
-for i in range(0, t):
-    n = int(input())
-    if n < 1 or n > 200:
-        sys.exit()
+import sys
+from numba import jit
+
+@jit(nopython = True)
+def fun(n):
     d = []
     for i in range(2, n+1):
         c = 0
@@ -39,3 +37,14 @@ for i in range(0, t):
         print("YES")
     else:
         print("NO")
+
+if __name__ == "__main__":
+    t = int(input())
+    if t < 1 or t > 200:
+        sys.exit(1)
+    for i in range(0, t):
+        n = int(input())
+        if n < 1 or n > 200:
+            sys.exit(1)
+        fun(n)
+    sys.exit(0)
